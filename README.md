@@ -22,6 +22,20 @@ for:
 
 and done! This way, the react service worker will act just like the default registerServiceWorker.
 
+An better use of this module would be:
+
+    const appSW = registerServiceWorker()
+
+    ReactDOM.render(<App appServiceWorker={appSW} />, document.getElementById('root'));
+
+and in the App component you could do this to show messages such as "the app has been installed" or "there is an new update, please refresh":
+
+    componentDidMount() {
+        const { appServiceWorker } = this.props
+        appServiceWorker.onInstalled(() => this.setState({ showInstalledMessage: true }))
+        appServiceWorker.onUpdateFound(() => this.setState({ showUpdateMessage: true }))
+    }
+
 ## Tests
 
   `npm test`
