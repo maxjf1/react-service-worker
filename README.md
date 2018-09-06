@@ -1,5 +1,4 @@
-React Service Worker
-=========
+# React Service Worker
 
 Simple and powerful alternative for the default create-react-app registerServiceWorker
 

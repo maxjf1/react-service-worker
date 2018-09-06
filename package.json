@@ -1,6 +1,6 @@
 {
   "name": "react-service-worker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple and powerful alternative for the default create-react-app registerServiceWorker",
   "main": "index.js",
   "scripts": {
